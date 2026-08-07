@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CLASS_CATEGORIES } from '../../config/classes'
 
 const steps = [
     'Student Information',
@@ -11,7 +12,6 @@ const steps = [
 ]
 
 const initialForm = {
-    studentPhoto: '',
     firstName: '',
     middleName: '',
     lastName: '',
@@ -29,6 +29,7 @@ const initialForm = {
     genotype: '',
     languages: '',
     classApplyingFor: '',
+    schoolSection: '',
     academicSession: '',
     boardingStatus: '',
     previousSchool: '',
@@ -67,12 +68,6 @@ const initialForm = {
     doctorName: '',
     hospital: '',
     medicalNotes: '',
-    previousSchoolReport: '',
-    testimonial: '',
-    transferLetter: '',
-    immunizationCard: '',
-    parentId: '',
-    utilityBill: '',
     yearsAttended: '',
     currentGrade: '',
     subjectsStudied: '',
@@ -86,24 +81,15 @@ const initialForm = {
 }
 
 const interestOptions = [
-    'Football',
-    'Basketball',
-    'Athletics',
-    'Music',
-    'Dance',
-    'Drama',
-    'Coding',
-    'Robotics',
-    'Chess',
-    'Debate',
-    'Reading',
-    'Art',
-    'Science Club',
+    'Football', 'Basketball', 'Athletics', 'Music', 'Dance', 'Drama',
+    'Coding', 'Robotics', 'Chess', 'Debate', 'Reading', 'Art', 'Science Club',
 ]
 
 export default function AdmissionForm() {
     const [step, setStep] = useState(0)
     const [form, setForm] = useState(initialForm)
+    const [loading, setLoading] = useState(false)
+    const [status, setStatus] = useState({ type: '', message: '' })
 
     const progress = useMemo(() => ((step + 1) / steps.length) * 100, [step])
 
@@ -126,6 +112,103 @@ export default function AdmissionForm() {
 
     const nextStep = () => setStep((current) => Math.min(current + 1, steps.length - 1))
     const prevStep = () => setStep((current) => Math.max(current - 1, 0))
+
+    const handleSubmit = async () => {
+        setLoading(true)
+        setStatus({ type: '', message: '' })
+        try {
+            const api = (await import('../../api/axios')).default
+            await api.post('/api/admissions', {
+                firstName: form.firstName,
+                middleName: form.middleName,
+                lastName: form.lastName,
+                gender: form.gender,
+                dateOfBirth: form.dob,
+                age: form.age,
+                placeOfBirth: form.placeOfBirth,
+                nationality: form.nationality,
+                stateOfOrigin: form.state,
+                lga: form.lga,
+                homeAddress: form.homeAddress,
+                residentialAddress: form.residentialAddress,
+                religion: form.religion,
+                bloodGroup: form.bloodGroup,
+                genotype: form.genotype,
+                languages: form.languages,
+                classApplyingFor: form.classApplyingFor,
+                schoolSection: form.schoolSection,
+                academicSession: form.academicSession,
+                boardingStatus: form.boardingStatus,
+                previousSchool: form.previousSchool,
+                previousSchoolAddress: form.previousSchoolAddress,
+                currentClass: form.currentClass,
+                reasonForLeaving: form.reasonForLeaving,
+                transferStudent: form.transferStudent,
+                parents: {
+                    father: {
+                        name: form.fatherName,
+                        occupation: form.fatherOccupation,
+                        company: form.fatherCompany,
+                        phone: form.fatherPhone,
+                        whatsapp: form.fatherWhatsapp,
+                        email: form.fatherEmail,
+                        address: form.fatherAddress,
+                    },
+                    mother: {
+                        name: form.motherName,
+                        occupation: form.motherOccupation,
+                        company: form.motherCompany,
+                        phone: form.motherPhone,
+                        whatsapp: form.motherWhatsapp,
+                        email: form.motherEmail,
+                        address: form.motherAddress,
+                    },
+                    guardian: {
+                        name: form.guardianName,
+                        relationship: form.guardianRelationship,
+                        phone: form.guardianPhone,
+                        email: form.guardianEmail,
+                        address: form.guardianAddress,
+                    },
+                },
+                emergency: {
+                    name: form.emergencyName,
+                    relationship: form.emergencyRelationship,
+                    phone: form.emergencyPhone,
+                    altPhone: form.emergencyAltPhone,
+                },
+                medical: {
+                    allergies: form.allergies,
+                    conditions: form.medicalConditions,
+                    disabilities: form.disabilities,
+                    medication: form.medication,
+                    specialNeeds: form.specialNeeds,
+                    doctorName: form.doctorName,
+                    hospital: form.hospital,
+                    notes: form.medicalNotes,
+                },
+                academicHistory: {
+                    yearsAttended: form.yearsAttended,
+                    currentGrade: form.currentGrade,
+                    subjectsStudied: form.subjectsStudied,
+                    averagePerformance: form.averagePerformance,
+                    awards: form.awards,
+                    extracurricular: form.extracurricular,
+                },
+                interests: form.interests,
+                certifications: {
+                    certifyInfo: form.certifyInfo,
+                    agreeRules: form.agreeRules,
+                    consent: form.consent,
+                },
+            })
+            setStatus({ type: 'success', message: 'Admission application submitted successfully! We will contact you soon.' })
+        } catch (err) {
+            setStatus({ type: 'error', message: err.response?.data?.message || 'Submission failed. Please try again.' })
+        } finally {
+            setLoading(false)
+        }
+    }
 
     const renderStep = () => {
         switch (step) {
@@ -154,15 +237,24 @@ export default function AdmissionForm() {
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="bloodGroup" value={form.bloodGroup} onChange={handleChange} placeholder="Blood Group" />
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="genotype" value={form.genotype} onChange={handleChange} placeholder="Genotype" />
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white md:col-span-2" name="languages" value={form.languages} onChange={handleChange} placeholder="Languages Spoken" />
-                        <label className="md:col-span-2 text-sm text-slate-400">Upload a passport photograph</label>
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white md:col-span-2" type="file" name="studentPhoto" onChange={handleChange} />
                     </div>
                 )
             case 1:
                 return (
                     <div className="grid gap-4 md:grid-cols-2">
                         <label className="md:col-span-2 text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Admission Details</label>
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="classApplyingFor" value={form.classApplyingFor} onChange={handleChange} placeholder="Class Applying For" />
+                        <select className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="schoolSection" value={form.schoolSection} onChange={handleChange}>
+                            <option value="">School Section</option>
+                            {Object.keys(CLASS_CATEGORIES).map((section) => (
+                                <option key={section} value={section}>{section}</option>
+                            ))}
+                        </select>
+                        <select className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="classApplyingFor" value={form.classApplyingFor} onChange={handleChange} disabled={!form.schoolSection}>
+                            <option value="">Class Applying For</option>
+                            {(form.schoolSection ? CLASS_CATEGORIES[form.schoolSection] : []).map((cls) => (
+                                <option key={cls} value={cls}>{cls}</option>
+                            ))}
+                        </select>
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="academicSession" value={form.academicSession} onChange={handleChange} placeholder="Academic Session" />
                         <select className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="boardingStatus" value={form.boardingStatus} onChange={handleChange}>
                             <option value="">Boarding or Day Student</option>
@@ -241,13 +333,6 @@ export default function AdmissionForm() {
                 return (
                     <div className="grid gap-4 md:grid-cols-2">
                         <label className="md:col-span-2 text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">Documents & Academic History</label>
-                        <label className="md:col-span-2 text-sm text-slate-400">Supported formats: PDF, JPG, PNG</label>
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" type="file" name="previousSchoolReport" onChange={handleChange} />
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" type="file" name="testimonial" onChange={handleChange} />
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" type="file" name="transferLetter" onChange={handleChange} />
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" type="file" name="immunizationCard" onChange={handleChange} />
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" type="file" name="parentId" onChange={handleChange} />
-                        <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" type="file" name="utilityBill" onChange={handleChange} />
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="yearsAttended" value={form.yearsAttended} onChange={handleChange} placeholder="Years Attended" />
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="currentGrade" value={form.currentGrade} onChange={handleChange} placeholder="Current Grade" />
                         <input className="rounded-2xl border border-slate-700 bg-slate-950 px-4 py-3 text-white" name="subjectsStudied" value={form.subjectsStudied} onChange={handleChange} placeholder="Subjects Studied" />
@@ -282,7 +367,6 @@ export default function AdmissionForm() {
                                 <span>I consent to the processing of my child&apos;s information.</span>
                             </label>
                         </div>
-                        <button type="button" className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950">Submit Application</button>
                     </div>
                 )
             default:
@@ -296,6 +380,16 @@ export default function AdmissionForm() {
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">Admissions</p>
                 <h1 className="mt-3 text-3xl font-semibold text-white">Student Admission Application</h1>
                 <p className="mt-3 text-lg leading-8 text-slate-400">A professional, multi-step form to collect complete student, parent, medical, academic, and document information for the admissions office.</p>
+
+                {status.message && (
+                    <div className={`mt-6 rounded-2xl border px-4 py-3 text-sm ${
+                        status.type === 'success'
+                            ? 'border-green-500/30 bg-green-500/10 text-green-300'
+                            : 'border-red-500/30 bg-red-500/10 text-red-300'
+                    }`}>
+                        {status.message}
+                    </div>
+                )}
 
                 <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
                     <div className="mb-3 flex items-center justify-between text-sm text-slate-400">
@@ -322,7 +416,11 @@ export default function AdmissionForm() {
                     <button type="button" onClick={prevStep} className="rounded-full border border-slate-700 px-6 py-3 font-semibold text-white">Back</button>
                     {step < steps.length - 1 ? (
                         <button type="button" onClick={nextStep} className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950">Next Step</button>
-                    ) : null}
+                    ) : (
+                        <button type="button" onClick={handleSubmit} disabled={loading || !form.certifyInfo || !form.agreeRules || !form.consent} className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950 disabled:opacity-50">
+                            {loading ? 'Submitting...' : 'Submit Application'}
+                        </button>
+                    )}
                 </div>
 
                 <p className="mt-6 text-sm text-slate-400">

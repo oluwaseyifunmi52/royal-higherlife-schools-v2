@@ -1,132 +1,159 @@
-const feeCategories = [
-    'Admission Fee',
-    'Tuition Fee',
-    'Registration Fee',
-    'Books Fee',
-    'ICT Fee',
-    'Examination Fee',
-    'Library Fee',
-    'Uniform Fee',
-    'Sports Fee',
-    'Transport Fee',
-    'Meal Fee',
-    'PTA Levy',
-    'Graduation Fee',
-    'Excursion Fee',
-    'Hostel Fee',
-    'Summer School',
-    'Other Charges',
-]
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const recentPayments = [
-    { student: 'John Doe', fee: 'Tuition', amount: '₦60,000', status: 'Successful' },
-    { student: 'Ama Boateng', fee: 'Books', amount: '₦15,000', status: 'Pending' },
-    { student: 'Kofi Mensah', fee: 'Transport', amount: '₦10,000', status: 'Successful' },
-]
+const methodLabels = {
+  cash: 'Cash',
+  bank_transfer: 'Bank Transfer',
+  pos: 'POS',
+  paystack: 'Paystack',
+  flutterwave: 'Flutterwave',
+  other: 'Other',
+}
 
 export default function PaymentDashboard() {
-    return (
-        <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-            <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">Admin portal</p>
-                <h1 className="mt-2 text-3xl font-semibold text-white">Payments</h1>
-                <p className="mt-3 text-lg text-slate-400">Create fees, review payment activity, and monitor outstanding balances across the school.</p>
+  const [stats, setStats] = useState(null)
+  const [recentPayments, setRecentPayments] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [session, setSession] = useState(`${new Date().getFullYear()}/${new Date().getFullYear() + 1}`)
+  const [term, setTerm] = useState('')
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const api = (await import('../../api/axios')).default
+        const params = {}
+        if (session) params.session = session
+        if (term) params.term = term
+
+        const [statsRes, paymentsRes] = await Promise.allSettled([
+          api.get('/api/payments/dashboard-stats', { params }),
+          api.get('/api/payments', { params: { ...params, limit: 10 } }),
+        ])
+        if (statsRes.status === 'fulfilled') {
+          setStats(statsRes.value.data.data)
+        }
+        if (paymentsRes.status === 'fulfilled') {
+          setRecentPayments(paymentsRes.value.data.data?.payments || [])
+        }
+      } catch {
+        // ignore
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchData()
+  }, [session, term])
+
+  const fmt = (n) => `₦${Number(n || 0).toLocaleString()}`
+
+  return (
+    <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">Admin portal</p>
+          <h1 className="mt-2 text-3xl font-semibold text-white">Payment Management</h1>
+          <p className="mt-3 text-lg text-slate-400">Monitor all payments, record manual transactions, and generate reports.</p>
+        </div>
+        <div className="flex gap-3">
+          <Link to="/admin/payments/record" className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950">+ Record Payment</Link>
+          <Link to="/admin/payments/reports" className="rounded-full border border-slate-700 px-6 py-3 font-semibold text-white">Reports</Link>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-3 mb-8">
+        <label className="text-sm text-slate-400">
+          <span className="mb-1 block">Session</span>
+          <input value={session} onChange={(e) => setSession(e.target.value)} className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-white" placeholder="2026/2027" />
+        </label>
+        <label className="text-sm text-slate-400">
+          <span className="mb-1 block">Term</span>
+          <select value={term} onChange={(e) => setTerm(e.target.value)} className="rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-white">
+            <option value="">All Terms</option>
+            <option value="First Term">First Term</option>
+            <option value="Second Term">Second Term</option>
+            <option value="Third Term">Third Term</option>
+          </select>
+        </label>
+      </div>
+
+      {loading ? (
+        <p className="text-slate-400">Loading dashboard...</p>
+      ) : (
+        <>
+          <section className="grid gap-4 md:grid-cols-4 mb-8">
+            <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
+              <p className="text-sm text-slate-400">Total Collected</p>
+              <p className="mt-2 text-2xl font-bold text-white">{fmt(stats?.totalCollected)}</p>
             </div>
+            <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
+              <p className="text-sm text-slate-400">Today&apos;s Payments</p>
+              <p className="mt-2 text-2xl font-bold text-white">{fmt(stats?.todayPayments?.total)}</p>
+              <p className="text-xs text-slate-500">{stats?.todayPayments?.count || 0} transactions</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
+              <p className="text-sm text-slate-400">This Week</p>
+              <p className="mt-2 text-2xl font-bold text-white">{fmt(stats?.weekPayments?.total)}</p>
+              <p className="text-xs text-slate-500">{stats?.weekPayments?.count || 0} transactions</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
+              <p className="text-sm text-slate-400">This Month</p>
+              <p className="mt-2 text-2xl font-bold text-white">{fmt(stats?.monthPayments?.total)}</p>
+              <p className="text-xs text-slate-500">{stats?.monthPayments?.count || 0} transactions</p>
+            </div>
+          </section>
 
-            <section className="mt-8 grid gap-4 md:grid-cols-4">
-                <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
-                    <p className="text-sm text-slate-400">Total revenue</p>
-                    <p className="mt-2 text-2xl font-semibold text-white">₦4.2M</p>
-                </div>
-                <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
-                    <p className="text-sm text-slate-400">Today&apos;s payments</p>
-                    <p className="mt-2 text-2xl font-semibold text-white">₦180,000</p>
-                </div>
-                <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
-                    <p className="text-sm text-slate-400">Outstanding fees</p>
-                    <p className="mt-2 text-2xl font-semibold text-white">₦1.8M</p>
-                </div>
-                <div className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
-                    <p className="text-sm text-slate-400">Students owing</p>
-                    <p className="mt-2 text-2xl font-semibold text-white">148</p>
-                </div>
-            </section>
+          <section className="grid gap-4 md:grid-cols-5 mb-8">
+            {stats?.byMethod?.map((m) => (
+              <div key={m._id} className="rounded-[1.5rem] border border-slate-800 bg-slate-900/80 p-5">
+                <p className="text-sm text-slate-400">{methodLabels[m._id] || m._id}</p>
+                <p className="mt-2 text-xl font-bold text-white">{fmt(m.total)}</p>
+                <p className="text-xs text-slate-500">{m.count} payments</p>
+              </div>
+            ))}
+          </section>
 
-            <section className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6">
-                    <h2 className="text-xl font-semibold text-white">Create new fee</h2>
-                    <div className="mt-6 grid gap-4 md:grid-cols-2">
-                        <label className="text-sm text-slate-400">
-                            <span className="mb-2 block">Fee name</span>
-                            <input className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white" placeholder="e.g. ICT Fee" />
-                        </label>
-                        <label className="text-sm text-slate-400">
-                            <span className="mb-2 block">Amount</span>
-                            <input className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white" placeholder="₦10,000" />
-                        </label>
-                        <label className="text-sm text-slate-400">
-                            <span className="mb-2 block">Category</span>
-                            <select className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white">
-                                {feeCategories.map((category) => (
-                                    <option key={category}>{category}</option>
-                                ))}
-                            </select>
-                        </label>
-                        <label className="text-sm text-slate-400">
-                            <span className="mb-2 block">Academic session</span>
-                            <input className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white" placeholder="2026/2027" />
-                        </label>
-                        <label className="text-sm text-slate-400">
-                            <span className="mb-2 block">Term</span>
-                            <input className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white" placeholder="First Term" />
-                        </label>
-                        <label className="text-sm text-slate-400">
-                            <span className="mb-2 block">Class</span>
-                            <input className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white" placeholder="Basic 3" />
-                        </label>
-                        <label className="text-sm text-slate-400 md:col-span-2">
-                            <span className="mb-2 block">Due date</span>
-                            <input type="date" className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-white" />
-                        </label>
-                        <label className="text-sm text-slate-400 md:col-span-2">
-                            <span className="mb-2 block">Description</span>
-                            <textarea className="min-h-[120px] w-full rounded-[1.25rem] border border-slate-700 bg-slate-950 px-4 py-3 text-white" placeholder="Add a short description" />
-                        </label>
+          <section className="grid gap-4 md:grid-cols-3 mb-8">
+            <div className="rounded-[1.5rem] border border-green-500/30 bg-green-500/5 p-5">
+              <p className="text-sm text-green-300">Fully Paid Students</p>
+              <p className="mt-2 text-2xl font-bold text-white">{stats?.fullyPaid || 0}</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-amber-500/30 bg-amber-500/5 p-5">
+              <p className="text-sm text-amber-300">Partially Paid</p>
+              <p className="mt-2 text-2xl font-bold text-white">{stats?.partiallyPaid || 0}</p>
+            </div>
+            <div className="rounded-[1.5rem] border border-red-500/30 bg-red-500/5 p-5">
+              <p className="text-sm text-red-300">Unpaid Students</p>
+              <p className="mt-2 text-2xl font-bold text-white">{stats?.unpaid || 0}</p>
+            </div>
+          </section>
+
+          <section className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6">
+            <h2 className="text-xl font-semibold text-white mb-4">Recent Payments</h2>
+            {recentPayments.length === 0 ? (
+              <p className="text-slate-400">No payments recorded yet.</p>
+            ) : (
+              <div className="space-y-3">
+                {recentPayments.map((p) => (
+                  <Link
+                    key={p._id}
+                    to={`/admin/payments/${p._id}`}
+                    className="flex flex-wrap items-center justify-between rounded-[1.25rem] border border-slate-800 bg-slate-950/70 p-4 hover:border-slate-700 transition-colors"
+                  >
+                    <div>
+                      <p className="font-semibold text-white">{p.studentId?.name || 'Student'}</p>
+                      <p className="text-sm text-slate-400">{p.receiptNumber || 'N/A'} · {new Date(p.paymentDate).toLocaleDateString()}</p>
                     </div>
-                    <button className="mt-6 rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950">Publish fee</button>
-                </div>
-
-                <div className="space-y-6">
-                    <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6">
-                        <h2 className="text-xl font-semibold text-white">Fee categories</h2>
-                        <div className="mt-4 flex flex-wrap gap-2">
-                            {feeCategories.map((category) => (
-                                <span key={category} className="rounded-full border border-slate-700 px-3 py-2 text-sm text-slate-300">{category}</span>
-                            ))}
-                        </div>
+                    <div className="text-right">
+                      <p className="font-bold text-white">₦{p.amount?.toLocaleString()}</p>
+                      <p className="text-sm text-slate-400">{methodLabels[p.paymentMethod] || p.paymentMethod}</p>
                     </div>
-
-                    <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6">
-                        <h2 className="text-xl font-semibold text-white">Recent payments</h2>
-                        <div className="mt-4 space-y-3">
-                            {recentPayments.map((payment) => (
-                                <div key={`${payment.student}-${payment.fee}`} className="rounded-[1.25rem] border border-slate-800 bg-slate-950/70 p-4">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <p className="font-semibold text-white">{payment.student}</p>
-                                            <p className="text-sm text-slate-400">{payment.fee}</p>
-                                        </div>
-                                        <div className="text-right">
-                                            <p className="font-semibold text-white">{payment.amount}</p>
-                                            <p className={payment.status === 'Successful' ? 'text-sm text-green-300' : 'text-sm text-amber-300'}>{payment.status}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    )
+                  </Link>
+                ))}
+              </div>
+            )}
+          </section>
+        </>
+      )}
+    </main>
+  )
 }

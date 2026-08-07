@@ -5,24 +5,40 @@ export default function PaymentModal({ isOpen, fee, onClose, onSuccess }) {
     const [amount, setAmount] = useState('')
     const [reference, setReference] = useState('')
     const [note, setNote] = useState('')
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState('')
 
     useEffect(() => {
         if (fee) {
             setMethod('Paystack')
-            setAmount(fee.amount.replace(/[^\d]/g, ''))
+            setAmount(fee.amount?.replace(/[^\d]/g, '') || '')
             setReference(`RHS-${Date.now().toString().slice(-6)}`)
             setNote(`Payment for ${fee.name}`)
         }
     }, [fee, isOpen])
 
-    if (!isOpen) {
-        return null
-    }
+    if (!isOpen) return null
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
-        onSuccess({ method, amount, reference, note })
-        onClose()
+        setLoading(true)
+        setError('')
+        try {
+            const api = (await import('../api/axios')).default
+            await api.post('/api/payments/initiate', {
+                feeId: fee._id || fee.id || undefined,
+                amount: Number(amount),
+                method,
+                reference,
+                note,
+            })
+            onSuccess({ method, amount, reference, note })
+            onClose()
+        } catch (err) {
+            setError(err.response?.data?.message || 'Payment initiation failed. Please try again.')
+        } finally {
+            setLoading(false)
+        }
     }
 
     return (
@@ -35,6 +51,12 @@ export default function PaymentModal({ isOpen, fee, onClose, onSuccess }) {
                     </div>
                     <button type="button" onClick={onClose} className="rounded-full border border-slate-700 px-3 py-1 text-sm text-slate-300">Close</button>
                 </div>
+
+                {error && (
+                    <div className="mt-4 rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+                        {error}
+                    </div>
+                )}
 
                 <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                     <label className="block text-sm text-slate-400">
@@ -61,7 +83,9 @@ export default function PaymentModal({ isOpen, fee, onClose, onSuccess }) {
                     </label>
 
                     <div className="flex flex-wrap gap-3 pt-2">
-                        <button type="submit" className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950">Complete payment</button>
+                        <button type="submit" disabled={loading} className="rounded-full bg-amber-500 px-6 py-3 font-semibold text-slate-950 disabled:opacity-50">
+                            {loading ? 'Processing...' : 'Complete payment'}
+                        </button>
                         <button type="button" onClick={onClose} className="rounded-full border border-slate-700 px-6 py-3 font-semibold text-white">Cancel</button>
                     </div>
                 </form>

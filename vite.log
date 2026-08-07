@@ -1,0 +1,544 @@
+
+> vite-project@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v8.2.1[39m  [2mready in [0m[1m1397[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m9:39:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:39:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:39:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:39:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:39:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:40:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherProfile.jsx, /src/pages/teacher/TeacherEditProfile.jsx, /src/pages/teacher/CreateClass.jsx, /src/pages/teacher/TeacherResults.jsx, /src/pages/teacher/Dashboard.jsx, /src/pages/teacher/CreateQuiz.jsx, /src/pages/teacher/CreateAssignment.jsx, /src/pages/teacher/TeacherAttendance.jsx, /src/pages/teacher/ManageLessons.jsx, /src/pages/admin/AdminTeachers.jsx, /src/pages/teacher/ClassAnalytics.jsx[22m
+[2m9:40:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:40:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/AdmissionForm.jsx, /src/index.css[22m
+[2m9:40:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/Dashboard.jsx, /src/index.css[22m
+[2m9:40:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/AdmissionForm.jsx, /src/index.css[22m
+[2m9:40:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/Dashboard.jsx, /src/index.css[22m
+[2m9:40:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/AdmissionForm.jsx, /src/index.css[22m
+[2m9:40:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/Dashboard.jsx, /src/index.css[22m
+[2m9:40:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/AdmissionForm.jsx, /src/index.css[22m
+[2m9:41:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:41:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherVideos.jsx[22m
+[2m9:41:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminStaff.jsx, /src/pages/admin/AdminVideos.jsx, /src/pages/admin/AdminQuestions.jsx, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m9:41:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuestions.jsx[22m
+[2m9:42:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:43:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherVideos.jsx[22m
+[2m9:43:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuestions.jsx[22m
+[2m9:43:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/QuizResults.jsx[22m
+[2m9:44:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:44:16 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 3 errors:
+
+[31m[PARSE_ERROR] [0mIdentifier `TeacherVideos` has already been declared
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/App.jsx:56:8 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m56 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0mTeacherVideos[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m/[0m[38;5;249mT[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mV[0m[38;5;249mi[0m[38;5;249md[0m[38;5;249me[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m   │[0m        ──────┬──────  
+ [38;5;240m   │[0m              ╰──────── `TeacherVideos` has already been declared here
+ [38;5;240m   │[0m 
+ [38;5;246m60 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0mTeacherVideos[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m/[0m[38;5;249mT[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mV[0m[38;5;249mi[0m[38;5;249md[0m[38;5;249me[0m[38;5;249mo[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m   │[0m        ──────┬──────  
+ [38;5;240m   │[0m              ╰──────── It can not be redeclared here
+[38;5;246m────╯[0m
+
+[31m[PARSE_ERROR] [0mIdentifier `TeacherQuestions` has already been declared
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/App.jsx:57:8 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m57 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0mTeacherQuestions[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m/[0m[38;5;249mT[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mQ[0m[38;5;249mu[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m   │[0m        ────────┬───────  
+ [38;5;240m   │[0m                ╰───────── `TeacherQuestions` has already been declared here
+ [38;5;240m   │[0m 
+ [38;5;246m61 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0mTeacherQuestions[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m/[0m[38;5;249mT[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mQ[0m[38;5;249mu[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249mi[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m   │[0m        ────────┬───────  
+ [38;5;240m   │[0m                ╰───────── It can not be redeclared here
+[38;5;246m────╯[0m
+
+[31m[PARSE_ERROR] [0mIdentifier `QuizResults` has already been declared
+    [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/App.jsx:58:8 [38;5;246m][0m
+    [38;5;246m│[0m
+ [38;5;246m58 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0mQuizResults[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m/[0m[38;5;249mQ[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mR[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m   │[0m        ─────┬─────  
+ [38;5;240m   │[0m             ╰─────── `QuizResults` has already been declared here
+ [38;5;240m   │[0m 
+ [38;5;246m63 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0mQuizResults[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m/[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mh[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m/[0m[38;5;249mQ[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mR[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m   │[0m        ─────┬─────  
+ [38;5;240m   │[0m             ╰─────── It can not be redeclared here
+[38;5;246m────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/App.jsx[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m9:45:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m9:48:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherVideos.jsx[22m
+[2m9:49:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuestions.jsx[22m
+[2m9:52:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherVideos.jsx[22m
+[2m9:53:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuestions.jsx[22m
+[2m9:53:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:53:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:53:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:53:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:54:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:54:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:54:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:54:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:54:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:55:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/QuizResults.jsx[22m
+[2m9:55:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/CreateClass.jsx, /src/pages/admin/AdminStudents.jsx, /src/pages/bursar/BursarRecordPayment.jsx, /src/pages/bursar/BursarStudents.jsx[22m
+[2m9:55:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/student/StudentVideos.jsx[22m
+[2m9:55:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/student/StudentQuizAttempts.jsx[22m
+[2m9:56:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/student/QuizPage.jsx, /src/index.css[22m
+[2m9:56:23 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mLogical expressions and coalesce expressions cannot be mixed
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/pages/student/QuizPage.jsx:102:124 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m102 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m<[0m[38;5;249mp[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249mN[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mm[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249m2[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249m3[0m[38;5;249mx[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249mb[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249m"[0m[38;5;249m>[0m[38;5;249m{[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mM[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mk[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249m?[0m[38;5;249m?[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m?[0m[38;5;249m?[0m[38;5;249m [0m[38;5;249m0[0m[38;5;249m}[0m[38;5;249m [0m[38;5;249m/[0m[38;5;249m [0m[38;5;249m{[0mresult.totalMarks ?? activeQuiz?.questions?.length || 0[38;5;249m}[0m[38;5;249m<[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249m>[0m
+ [38;5;240m    │[0m                                                                                                                            ───────────────────────────┬───────────────────────────  
+ [38;5;240m    │[0m                                                                                                                                                       ╰───────────────────────────── 
+ [38;5;240m    │[0m 
+ [38;5;240m    │[0m [38;5;115mHelp[0m: Wrap either expression by parentheses
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/pages/student/QuizPage.jsx[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m9:56:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuizDetail.jsx[22m
+[2m9:56:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m9:57:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuizList.jsx[22m
+[2m9:57:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/student/Dashboard.jsx, /src/index.css[22m
+[2m9:57:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/CreateQuiz.jsx, /src/pages/teacher/TeacherQuizList.jsx[22m
+[2m9:58:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminVideos.jsx[22m
+[2m9:59:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuestions.jsx[22m
+[2m9:59:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m9:59:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminStaff.jsx, /src/pages/admin/AdminVideos.jsx, /src/pages/admin/AdminQuestions.jsx, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m10:00:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/AdmissionForm.jsx, /src/index.css[22m
+[2m10:00:31 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mIdentifier `CLASS_CATEGORIES` has already been declared
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/pages/public/AdmissionForm.jsx:3:10 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m3 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0mCLASS_CATEGORIES[38;5;249m,[0m[38;5;249m [0m[38;5;249mC[0m[38;5;249mL[0m[38;5;249mA[0m[38;5;249mS[0m[38;5;249mS[0m[38;5;249m_[0m[38;5;249mC[0m[38;5;249mA[0m[38;5;249mT[0m[38;5;249mE[0m[38;5;249mG[0m[38;5;249mO[0m[38;5;249mR[0m[38;5;249mI[0m[38;5;249mE[0m[38;5;249mS[0m[38;5;249m_[0m[38;5;249mL[0m[38;5;249mI[0m[38;5;249mS[0m[38;5;249mT[0m[38;5;249m [0m[38;5;249m}[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249m.[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mg[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m  │[0m          ────────┬───────  
+ [38;5;240m  │[0m                  ╰───────── `CLASS_CATEGORIES` has already been declared here
+ [38;5;246m4 │[0m [38;5;249mi[0m[38;5;249mm[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249m{[0m[38;5;249m [0mCLASS_CATEGORIES[38;5;249m [0m[38;5;249m}[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mr[0m[38;5;249mo[0m[38;5;249mm[0m[38;5;249m [0m[38;5;249m'[0m[38;5;249m.[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249m.[0m[38;5;249m.[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mf[0m[38;5;249mi[0m[38;5;249mg[0m[38;5;249m/[0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249m'[0m
+ [38;5;240m  │[0m          ────────┬───────  
+ [38;5;240m  │[0m                  ╰───────── It can not be redeclared here
+[38;5;246m───╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/pages/public/AdmissionForm.jsx[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m10:01:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/AdmissionForm.jsx, /src/index.css[22m
+[2m10:03:07 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mLogical expressions and coalesce expressions cannot be mixed
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/pages/student/QuizPage.jsx:102:124 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m102 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m<[0m[38;5;249mp[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249mN[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mm[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249m2[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249m3[0m[38;5;249mx[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249mb[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249m"[0m[38;5;249m>[0m[38;5;249m{[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mM[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mk[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249m?[0m[38;5;249m?[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m?[0m[38;5;249m?[0m[38;5;249m [0m[38;5;249m0[0m[38;5;249m}[0m[38;5;249m [0m[38;5;249m/[0m[38;5;249m [0m[38;5;249m{[0mresult.totalMarks ?? activeQuiz?.questions?.length || 0[38;5;249m}[0m[38;5;249m<[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249m>[0m
+ [38;5;240m    │[0m                                                                                                                            ───────────────────────────┬───────────────────────────  
+ [38;5;240m    │[0m                                                                                                                                                       ╰───────────────────────────── 
+ [38;5;240m    │[0m 
+ [38;5;240m    │[0m [38;5;115mHelp[0m: Wrap either expression by parentheses
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/pages/student/QuizPage.jsx[39m
+[2m10:03:07 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mLogical expressions and coalesce expressions cannot be mixed
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/pages/student/QuizPage.jsx:102:124 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m102 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m<[0m[38;5;249mp[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249mN[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mm[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249m2[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249m3[0m[38;5;249mx[0m[38;5;249ml[0m[38;5;249m [0m[38;5;249mf[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249mb[0m[38;5;249mo[0m[38;5;249ml[0m[38;5;249md[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249me[0m[38;5;249mx[0m[38;5;249mt[0m[38;5;249m-[0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249mi[0m[38;5;249mt[0m[38;5;249me[0m[38;5;249m"[0m[38;5;249m>[0m[38;5;249m{[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249me[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mn[0m[38;5;249me[0m[38;5;249md[0m[38;5;249mM[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mk[0m[38;5;249ms[0m[38;5;249m [0m[38;5;249m?[0m[38;5;249m?[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249mu[0m[38;5;249ml[0m[38;5;249mt[0m[38;5;249m.[0m[38;5;249ms[0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m?[0m[38;5;249m?[0m[38;5;249m [0m[38;5;249m0[0m[38;5;249m}[0m[38;5;249m [0m[38;5;249m/[0m[38;5;249m [0m[38;5;249m{[0mresult.totalMarks ?? activeQuiz?.questions?.length || 0[38;5;249m}[0m[38;5;249m<[0m[38;5;249m/[0m[38;5;249mp[0m[38;5;249m>[0m
+ [38;5;240m    │[0m                                                                                                                            ───────────────────────────┬───────────────────────────  
+ [38;5;240m    │[0m                                                                                                                                                       ╰───────────────────────────── 
+ [38;5;240m    │[0m 
+ [38;5;240m    │[0m [38;5;115mHelp[0m: Wrap either expression by parentheses
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/pages/student/QuizPage.jsx[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m10:03:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/student/QuizPage.jsx, /src/index.css[22m
+[2m10:04:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminVideos.jsx[22m
+[2m10:04:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminVideos.jsx[22m
+[2m10:05:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuestions.jsx[22m
+[2m10:05:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuestions.jsx[22m
+[2m10:05:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m10:05:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m10:08:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m10:08:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherProfile.jsx, /src/pages/teacher/TeacherEditProfile.jsx, /src/pages/teacher/CreateClass.jsx, /src/pages/teacher/TeacherResults.jsx, /src/pages/teacher/Dashboard.jsx, /src/pages/teacher/CreateQuiz.jsx, /src/pages/teacher/CreateAssignment.jsx, /src/pages/teacher/TeacherAttendance.jsx, /src/pages/teacher/ManageLessons.jsx, /src/pages/admin/AdminTeachers.jsx, /src/pages/teacher/ClassAnalytics.jsx, /src/pages/teacher/TeacherVideos.jsx and 1 more[22m
+[2m10:08:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/CreateQuiz.jsx, /src/index.css[22m
+[2m10:09:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/student/QuizPage.jsx, /src/index.css[22m
+[2m11:00:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherProfile.jsx, /src/pages/teacher/TeacherEditProfile.jsx, /src/pages/teacher/CreateClass.jsx, /src/pages/teacher/TeacherResults.jsx, /src/pages/teacher/Dashboard.jsx, /src/pages/teacher/CreateQuiz.jsx, /src/pages/teacher/CreateAssignment.jsx, /src/pages/teacher/TeacherAttendance.jsx, /src/pages/teacher/ManageLessons.jsx, /src/pages/admin/AdminTeachers.jsx, /src/pages/teacher/ClassAnalytics.jsx, /src/pages/teacher/TeacherVideos.jsx and 1 more[22m
+[2m11:01:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/CreateClass.jsx, /src/pages/admin/AdminStudents.jsx, /src/pages/bursar/BursarRecordPayment.jsx, /src/pages/bursar/BursarStudents.jsx, /src/pages/student/StudentVideos.jsx, /src/pages/student/StudentQuizAttempts.jsx, /src/pages/student/QuizPage.jsx[22m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+[2m11:01:08 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:01:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminStaff.jsx, /src/pages/admin/AdminVideos.jsx, /src/pages/admin/AdminQuestions.jsx, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m11:03:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherVideos.jsx[22m
+[2m11:06:24 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m11:06:28 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m11:06:31 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m107 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m11:07:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/CreateClass.jsx, /src/pages/admin/AdminStudents.jsx, /src/pages/bursar/BursarRecordPayment.jsx, /src/pages/bursar/BursarStudents.jsx, /src/pages/student/StudentVideos.jsx, /src/pages/student/StudentQuizAttempts.jsx, /src/pages/student/QuizPage.jsx[22m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:18 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+[2m11:07:19 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mDuplicated export 'getMyQuizAttempts'
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/services/studentService.js:92:14 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m 92 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249mq[0m[38;5;249mu[0m[38;5;249mi[0m[38;5;249mz[0m[38;5;249mI[0m[38;5;249md[0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── Export has already been declared here
+ [38;5;240m    │[0m 
+ [38;5;246m110 │[0m [38;5;249me[0m[38;5;249mx[0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249mt[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249ms[0m[38;5;249mt[0m[38;5;249m [0mgetMyQuizAttempts[38;5;249m [0m[38;5;249m=[0m[38;5;249m [0m[38;5;249m([0m[38;5;249m)[0m[38;5;249m [0m[38;5;249m=[0m[38;5;249m>[0m
+ [38;5;240m    │[0m              ────────┬────────  
+ [38;5;240m    │[0m                      ╰────────── It cannot be redeclared here
+[38;5;246m─────╯[0m
+[39m
+  Plugin: [35mvite:oxc[39m
+  File: [36mC:/Users/USER/OneDrive/Desktop/Royal higherlife schools/vite-project/src/services/studentService.js[39m
+      at transformWithOxc (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4097:19)
+      at TransformPluginContext.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:4168:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:30851:51)
+      at async loadAndTransform (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:20619:26)
+      at async viteTransformMiddleware (file:///C:/Users/USER/OneDrive/Desktop/Royal%20higherlife%20schools/vite-project/node_modules/vite/dist/node/chunks/node.js:25142:20)
+[2m11:07:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/CreateClass.jsx, /src/pages/admin/AdminStudents.jsx, /src/pages/bursar/BursarRecordPayment.jsx, /src/pages/bursar/BursarStudents.jsx, /src/pages/student/StudentVideos.jsx, /src/pages/student/StudentQuizAttempts.jsx, /src/pages/student/QuizPage.jsx[22m
+[2m11:16:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuestions.jsx[22m
+[2m11:21:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuizList.jsx[22m
+[2m11:22:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/TeacherQuizDetail.jsx[22m
+[2m11:24:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/teacher/QuizResults.jsx[22m
+[2m11:25:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/student/StudentVideos.jsx[22m
+[2m11:30:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m11:30:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m11:32:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminVideos.jsx[22m
+[2m11:47:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuestions.jsx[22m
+[2m11:51:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/admin/AdminQuizzes.jsx[22m
+[2m11:55:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/bursar/BursarFees.jsx, /src/index.css[22m
+[2m11:55:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/bursar/BursarFees.jsx, /src/index.css[22m
+[2m12:02:21 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m12:02:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m12:04:26 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/student/StudentQuizAttempts.jsx[22m
+[2m12:38:01 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/public/TeacherRegister.jsx, /src/index.css[22m
+[2m12:39:30 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/TeacherEditProfile.jsx, /src/index.css[22m
+[2m12:47:20 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminTeachers.jsx, /src/index.css[22m
+[2m12:47:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/teacher/TeacherProfile.jsx, /src/index.css[22m

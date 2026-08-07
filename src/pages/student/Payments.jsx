@@ -1,137 +1,165 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../context/AuthContext'
 import PaymentModal from '../../components/PaymentModal'
 
-const initialOutstandingFees = [
-    { name: 'First Term Tuition', amount: '₦60,000', status: 'Pending' },
-    { name: 'Books', amount: '₦15,000', status: 'Pending' },
-    { name: 'ICT Fee', amount: '₦10,000', status: 'Pending' },
-    { name: 'Transport', amount: '₦10,000', status: 'Pending' },
-]
+const methodLabels = {
+  cash: 'Cash',
+  bank_transfer: 'Bank Transfer',
+  pos: 'POS',
+  paystack: 'Paystack',
+  flutterwave: 'Flutterwave',
+  other: 'Other',
+}
 
 export default function StudentPayments() {
-    const [outstandingFees, setOutstandingFees] = useState(initialOutstandingFees)
-    const [selectedFee, setSelectedFee] = useState(null)
-    const [paymentHistory, setPaymentHistory] = useState([
-        { date: '15 Aug 2026', fee: 'Admission Fee', amount: '₦25,000', status: 'Successful', receipt: 'Download' },
-        { date: '10 Sep 2026', fee: 'Tuition', amount: '₦60,000', status: 'Pending', receipt: '—' },
-    ])
+  const { user } = useAuth()
+  const [fees, setFees] = useState([])
+  const [payments, setPayments] = useState([])
+  const [summary, setSummary] = useState(null)
+  const [selectedFee, setSelectedFee] = useState(null)
+  const [loading, setLoading] = useState(true)
 
-    const totalDue = useMemo(() => outstandingFees.reduce((total, fee) => total + Number(fee.amount.replace(/[^\d]/g, '')), 0), [outstandingFees])
-
-    const openModal = (fee) => {
-        setSelectedFee(fee)
-    }
-
-    const handlePaymentSuccess = ({ method, amount, reference, note }) => {
-        const formattedAmount = `₦${Number(amount).toLocaleString()}`
-        setPaymentHistory((previous) => [
-            { date: 'Today', fee: note, amount: formattedAmount, status: 'Successful', receipt: 'Download' },
-            ...previous,
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const api = (await import('../../api/axios')).default
+        const [feesRes, paymentsRes, summaryRes] = await Promise.allSettled([
+          api.get('/api/fees'),
+          api.get('/api/payments/my'),
+          api.get('/api/payments/my/summary'),
         ])
-
-        setOutstandingFees((previous) =>
-            previous.map((fee) =>
-                fee.name === selectedFee?.name ? { ...fee, status: 'Paid', amount: '₦0' } : fee
-            )
-        )
-
-        setSelectedFee(null)
-        window.alert(`Payment completed via ${method}. Reference: ${reference}`)
+        if (feesRes.status === 'fulfilled') setFees(feesRes.value.data.data || [])
+        if (paymentsRes.status === 'fulfilled') setPayments(paymentsRes.value.data.data || [])
+        if (summaryRes.status === 'fulfilled') setSummary(summaryRes.value.data.data)
+      } catch {
+        // ignore
+      } finally {
+        setLoading(false)
+      }
     }
+    fetchData()
+  }, [])
 
-    return (
-        <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">Student portal</p>
-                    <h1 className="mt-2 text-3xl font-semibold text-white">Payments</h1>
-                    <p className="mt-3 text-lg text-slate-400">Review your school fees, settle balances, and keep your records up to date.</p>
-                </div>
-                <div className="rounded-full border border-amber-400/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-300">
-                    Outstanding balance: ₦95,000
-                </div>
+  const totalDue = useMemo(
+    () => fees.reduce((total, fee) => total + (fee.amount || 0), 0),
+    [fees]
+  )
+
+  const openModal = (fee) => setSelectedFee(fee)
+
+  const handlePaymentSuccess = ({ method, amount, reference, note }) => {
+    setPayments((prev) => [
+      { _id: Date.now().toString(), amount: Number(amount), paymentMethod: method?.toLowerCase(), reference, description: note, status: 'paid', paymentDate: new Date().toISOString() },
+      ...prev,
+    ])
+    setSelectedFee(null)
+  }
+
+  return (
+    <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-amber-400">Student portal</p>
+          <h1 className="mt-2 text-3xl font-semibold text-white">My Fees</h1>
+          <p className="mt-3 text-lg text-slate-400">Review your school fees, settle balances, and keep your records up to date.</p>
+        </div>
+        <Link to="/student/payment-history" className="rounded-full border border-slate-700 px-6 py-3 font-semibold text-white">Payment History</Link>
+      </div>
+
+      {summary && (
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5">
+            <p className="text-sm text-slate-400">Student</p>
+            <p className="mt-2 font-bold text-white">{user?.name || 'N/A'}</p>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5">
+            <p className="text-sm text-slate-400">Total Fees</p>
+            <p className="mt-2 text-2xl font-bold text-white">₦{summary.totalFees?.toLocaleString()}</p>
+          </div>
+          <div className="rounded-2xl border border-green-500/30 bg-green-500/5 p-5">
+            <p className="text-sm text-green-300">Amount Paid</p>
+            <p className="mt-2 text-2xl font-bold text-white">₦{summary.totalPaid?.toLocaleString()}</p>
+          </div>
+          <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-5">
+            <p className="text-sm text-amber-300">Balance</p>
+            <p className="mt-2 text-2xl font-bold text-white">₦{summary.balance?.toLocaleString()}</p>
+            {summary.status === 'paid' ? (
+              <span className="text-xs text-green-300">✅ PAID</span>
+            ) : (
+              <span className="text-xs text-amber-300">⚠️ BALANCE DUE</span>
+            )}
+          </div>
+        </div>
+      )}
+
+      <section className="mt-8 rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6">
+        <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
+          <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
+            <h2 className="text-xl font-semibold text-white">Outstanding Fees</h2>
+            {loading ? (
+              <p className="mt-4 text-sm text-slate-400">Loading fees...</p>
+            ) : fees.length === 0 ? (
+              <p className="mt-4 text-sm text-slate-400">No outstanding fees.</p>
+            ) : (
+              <div className="mt-4 space-y-3">
+                {fees.map((fee) => (
+                  <div key={fee._id || fee.name} className="flex flex-wrap items-center justify-between rounded-[1.25rem] border border-slate-800 bg-slate-900/70 px-4 py-4">
+                    <div>
+                      <p className="font-semibold text-white">{fee.name || fee.title}</p>
+                      <p className="text-sm text-slate-400">{fee.type || 'Fee'}</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-sm font-semibold text-amber-300">₦{(fee.amount || 0).toLocaleString()}</span>
+                      <button onClick={() => openModal(fee)} className="rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950">Pay</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="space-y-4">
+            <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
+              <h3 className="text-lg font-semibold text-white">Quick Actions</h3>
+              <div className="mt-4 flex flex-col gap-3">
+                <button onClick={() => openModal({ name: 'Outstanding balance', amount: totalDue })} className="rounded-full bg-amber-500 px-4 py-3 font-semibold text-slate-950">Pay with Paystack</button>
+                <button onClick={() => openModal({ name: 'Outstanding balance', amount: totalDue })} className="rounded-full border border-slate-700 px-4 py-3 font-semibold text-white">Pay with Flutterwave</button>
+                <Link to="/student/payment-history" className="rounded-full border border-blue-400/30 px-4 py-3 text-center font-semibold text-blue-300">View payment history</Link>
+              </div>
             </div>
 
-            <section className="mt-8 rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6">
-                <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
-                    <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
-                        <h2 className="text-xl font-semibold text-white">Payment dashboard</h2>
-                        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                            <div className="rounded-[1.25rem] border border-slate-800 bg-slate-900/70 p-4">
-                                <p className="text-sm text-slate-400">Student</p>
-                                <p className="mt-2 font-semibold text-white">John Doe</p>
-                            </div>
-                            <div className="rounded-[1.25rem] border border-slate-800 bg-slate-900/70 p-4">
-                                <p className="text-sm text-slate-400">Admission No.</p>
-                                <p className="mt-2 font-semibold text-white">RHS20260015</p>
-                            </div>
-                            <div className="rounded-[1.25rem] border border-slate-800 bg-slate-900/70 p-4">
-                                <p className="text-sm text-slate-400">Class</p>
-                                <p className="mt-2 font-semibold text-white">Basic 3</p>
-                            </div>
-                            <div className="rounded-[1.25rem] border border-slate-800 bg-slate-900/70 p-4">
-                                <p className="text-sm text-slate-400">Academic Session</p>
-                                <p className="mt-2 font-semibold text-white">2026/2027</p>
-                            </div>
-                        </div>
-
-                        <div className="mt-6">
-                            <h3 className="text-lg font-semibold text-white">Outstanding fees</h3>
-                            <div className="mt-4 space-y-3">
-                                {outstandingFees.map((fee) => (
-                                    <div key={fee.name} className="flex flex-wrap items-center justify-between rounded-[1.25rem] border border-slate-800 bg-slate-900/70 px-4 py-4">
-                                        <div>
-                                            <p className="font-semibold text-white">{fee.name}</p>
-                                            <p className="text-sm text-slate-400">{fee.status}</p>
-                                        </div>
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-sm font-semibold text-amber-300">{fee.amount}</span>
-                                            <button onClick={() => openModal(fee)} className="rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950">Pay</button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+            <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
+              <h3 className="text-lg font-semibold text-white">Recent Payments</h3>
+              <div className="mt-4 space-y-3">
+                {payments.length === 0 ? (
+                  <p className="text-sm text-slate-400">No payments yet.</p>
+                ) : (
+                  payments.slice(0, 5).map((p) => (
+                    <div key={p._id} className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900/70 p-3">
+                      <div>
+                        <p className="text-sm text-white">{p.description || p.feeId?.title || 'Payment'}</p>
+                        <p className="text-xs text-slate-400">{new Date(p.paymentDate).toLocaleDateString()}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-semibold text-white">₦{p.amount?.toLocaleString()}</p>
+                        <p className="text-xs text-slate-400">{methodLabels[p.paymentMethod] || p.paymentMethod}</p>
+                      </div>
                     </div>
+                  ))
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <div className="space-y-4">
-                        <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
-                            <h3 className="text-lg font-semibold text-white">Quick actions</h3>
-                            <div className="mt-4 flex flex-col gap-3">
-                                <button onClick={() => openModal({ name: 'Outstanding balance', amount: `₦${totalDue.toLocaleString()}` })} className="rounded-full bg-amber-500 px-4 py-3 font-semibold text-slate-950">Pay with Paystack</button>
-                                <button onClick={() => openModal({ name: 'Outstanding balance', amount: `₦${totalDue.toLocaleString()}` })} className="rounded-full border border-slate-700 px-4 py-3 font-semibold text-white">Pay with Flutterwave</button>
-                                <Link to="/student/payment-history" className="rounded-full border border-blue-400/30 px-4 py-3 text-center font-semibold text-blue-300">View payment history</Link>
-                            </div>
-                        </div>
-
-                        <div className="rounded-[1.5rem] border border-slate-800 bg-slate-950/70 p-6">
-                            <h3 className="text-lg font-semibold text-white">Summary</h3>
-                            <div className="mt-4 space-y-3 text-sm text-slate-400">
-                                <div className="flex items-center justify-between">
-                                    <span>Total due</span>
-                                    <span className="font-semibold text-white">₦{totalDue.toLocaleString()}</span>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                    <span>Paid this term</span>
-                                    <span className="font-semibold text-white">₦25,000</span>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                    <span>Balance</span>
-                                    <span className="font-semibold text-amber-300">₦70,000</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <PaymentModal
-                isOpen={Boolean(selectedFee)}
-                fee={selectedFee}
-                onClose={() => setSelectedFee(null)}
-                onSuccess={handlePaymentSuccess}
-            />
-        </main>
-    )
+      <PaymentModal
+        isOpen={Boolean(selectedFee)}
+        fee={selectedFee}
+        onClose={() => setSelectedFee(null)}
+        onSuccess={handlePaymentSuccess}
+      />
+    </main>
+  )
 }
